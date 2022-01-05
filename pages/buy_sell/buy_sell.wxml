@@ -1,0 +1,49 @@
+<!--pages/strategy_working/buy_sell/buy_sell.wxml-->
+<view class="section__title">选择你的策略</view>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{strategy_array}}">
+  <view class="picker">
+    <view class="type">
+    当前选择：{{strategy_array[index]}}
+    </view>
+  </view>
+</picker>
+
+<button class='button' size="mini" type="default" bindtap="start">开始</button>
+<button class='button' size="mini" type="default" bindtap="stop">停止</button>
+<button class='button' size="mini" type="default" bindtap="add">添加对象</button>
+<button class='button' size="mini" type="default" bindtap="delete">删除对象</button>
+
+<view>对象信息{{obj_info}}</view>
+
+<view class="tr">
+  <view class="th">对象合约</view>
+  <view class="th">状态</view>
+</view>
+
+<view  class="table" wx:for="{{object_array}}" wx:key="obj_name"  bindtap="answerSelected" wx:for-index="index" class="item {{item.selected?'active':''}}" data-index="{{index}}">
+  <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+    <view class="td">{{item.obj_name}}</view>
+    <view class="td">{{item.state}}</view>
+  </view>
+  <view class="tr bg-w" wx:else>
+    <view class="td">{{item.obj_name}}</view>
+    <view class="td">{{item.state}}</view>
+  </view>
+</view>
+
+<modal show="{{showModal}}" height='60%' bindcancel="modalCancel" bindconfirm='modalConfirm'>
+  <view class='modal-content'>
+    <text>请输入新的对象名称</text>
+    <input auto-focus placeholder="对象名称" maxlength="10" bindinput="bindKeyInput_name" value='{{obj_name}}'/>
+    <view  class="table" wx:for="{{strategy_parameter}}" wx:key="para"   wx:for-index="index" data-index="{{index}}" bindtap='getindex'>
+      <text>请输入{{item.name}}</text>
+      <input auto-focus placeholder="{{item.name}}" bindinput="bindKeyInput_param" value="{{item.data}}"/>
+    </view>
+  </view>
+</modal>
+
+<modal show="{{showModal_delete}}" height='20%' bindcancel="modalCancel_delete" bindconfirm='modalConfirm_delete'>
+  <view class='modal-content'>
+    <text>确定要删除吗？</text>
+  </view>
+</modal>

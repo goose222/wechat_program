@@ -1,0 +1,6 @@
+<!--pages/k_line/k_line.wxml-->
+
+<view class="container">
+    <canvas canvas-id="lineCanvas" height="400" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+</view>
+<button class='finish' type='primary'  bindtap="back">返回行情</button>

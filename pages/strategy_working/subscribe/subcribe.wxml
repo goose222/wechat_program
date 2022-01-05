@@ -1,0 +1,21 @@
+<!--pages/subscribe/subcribe.wxml-->
+<view class="section">
+  <view class="section__title">选择订阅行情</view>
+
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">
+      <view class="type">
+      当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+      </view>
+    </view>
+  </picker>
+
+  
+  <view class='card' wx:for='{{select}}' wx:key='info'>
+    <text >{{select[index]}}</text> 
+    <button class='del'  type="default" size="mini" bindtap='delInput' data-idx='{{index}}'>删除</button>
+  </view>
+</view>
+
+  <button class='add' type="default" size="mini" bindtap="back">返回</button>
+  <button class='submit' type="default" size="mini" bindtap="submit">提交</button>

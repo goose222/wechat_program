@@ -1,0 +1,51 @@
+<!--pages/strategy_working/strategy_working.wxml-->
+<text>你的订阅</text>
+<view class="row">
+  <button class='button' type="default" size="mini" bindtap="add">添加订阅</button>
+  <button class='button' type="default" size="mini" bindtap="delete">删除订阅</button>
+  <button class='button' type="default" size="mini" bindtap="all">全部行情</button>
+  <button class='button' type="default" size="mini" bindtap="k_line">查看K线图</button>
+</view>
+
+<view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前交易选择：{{array[index]}}
+    </view>
+  </picker>
+  <view class="row">
+    <button class="button"  type="default" size="mini" disabled="{{minusStatus}}" plain='ture' bindtap='minusNum'>-</button>
+    <input  type='number' value='{{count}}' bindtap='bindKeyInput'></input>
+    <button class="button" type="default" size="mini" plain='ture' bindtap='addNum'>+</button>
+    <button class='button' type="default" size="mini" bindtap="buy_sell">确认</button>
+  </view>
+</view>
+
+<view class="tr">
+  <view class="th">vtSymbol</view>
+  <view class="th">lastPrice</view>
+  <view class="th">dateTime</view>
+</view>
+
+<view  class="table" wx:for="{{info}}" wx:key="vtsymbol"  bindtap="answerSelected" wx:for-index="index" class="item {{item.selected?'active':''}}" data-index="{{index}}">
+  <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+    <view class="td">{{item.vtSymbol}}</view>
+    <view class="td">{{item.lastPrice}}</view>
+    <view class="td">{{item.dateTime}}</view>
+  </view>
+  <view class="tr bg-w" wx:else>
+    <view class="td">{{item.vtSymbol}}</view>
+    <view class="td">{{item.lastPrice}}</view>
+    <view class="td">{{item.dateTime}}</view>
+  </view>
+</view>
+
+<modal show="{{showModal_delete}}" height='20%' bindcancel="modalCancel_delete" bindconfirm='modalConfirm_delete'>
+  <view class='modal-content'>
+    <text>确定要删除吗？</text>
+  </view>
+</modal>
+
+
+
+

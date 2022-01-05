@@ -1,0 +1,16 @@
+<!--pages/start_make_strategy/make_strategy/make_strategy.wxml-->
+<view class="page-body">
+  <view class="title">定制你的策略！</view>
+    <view class='card' wx:for="{{quest}}" wx:key="id" wx:for-index="outterIndex">
+        <text>{{item.id}}.{{item.question}}</text>
+        <radio-group bindchange="radioChange">
+        <label class="weui-cell weui-check__label" wx:for="{{item.answers}}" wx:key="index">
+          <radio value="{{item.id+item.index+item.next_id}}" checked="{{false}}"/>
+          <text>{{item.index}}. {{item.content}}</text>
+        </label>
+      </radio-group>
+      </view>
+  <view wx:if="{{isFinish}}">
+    <button class='finish' type='primary'  bindtap="finish">完成</button>
+  </view>
+</view>

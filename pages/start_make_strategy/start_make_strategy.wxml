@@ -1,0 +1,15 @@
+<!--pages/start_make_strategy.wxml-->
+<view class="title">开始定制你的策略！</view>
+<button class='button' type="primary"  bindtap="start">START</button>
+
+<view class="title">查看当前持仓</view>
+<button class='button' type="primary"  bindtap="holding">HOLDING</button>
+
+<view class="title">查看行情</view>
+<button class='button' type="primary"  bindtap="working">WORKING</button>
+
+<!-- <view class="title">买卖交易</view>
+<button class='button' type="primary"  bindtap="strategy">SELLING</button> -->
+
+<view class="title">策略运行状况</view>
+<button class='button' type="primary"  bindtap="strategy">STRATEGY</button>

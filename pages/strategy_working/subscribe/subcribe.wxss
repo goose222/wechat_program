@@ -1,0 +1,27 @@
+/* pages/subscribe/subcribe.wxss */
+.card {
+  border: 2px solid #caf8df;
+  border-radius: 5px;
+  background-color: #caf8df;
+  box-shadow: 4px 1px 1px #cccccc;
+  margin: 10px;
+  position: relative;
+  padding: 8px;
+}
+
+.del{
+  float: right; 
+}
+
+.type{
+  height: 104rpx;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+
+}

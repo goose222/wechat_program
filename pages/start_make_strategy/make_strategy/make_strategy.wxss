@@ -1,0 +1,30 @@
+/* pages/start_make_strategy/make_strategy/make_strategy.wxss */
+  page {
+  background-color: #eff5f1;
+  }
+  text {
+    font-size: 13pt;
+    color: #244233;
+    }
+
+.title {
+  margin: 10px;
+  font-size: 15pt;
+  color: #2b503d;
+}
+
+.card {
+  border: 2px solid #caf8df;
+  border-radius: 5px;
+  background-color: #caf8df;
+  box-shadow: 4px 1px 1px #cccccc;
+  margin: 10px;
+  position: relative;
+  padding: 8px;
+}
+
+.finish{ 
+  border-radius: 80rpx;
+  margin: 70rpx 50rpx;
+  font-size: 35rpx;
+}

@@ -1,0 +1,10 @@
+/* pages/administer/authority/authority.wxss */
+page {
+  background-color: #eff5f1;
+  }
+.tab{width: 96%; height:600rpx; border:2rpxsolid #cccccc; margin:20rpx auto;}
+.tab .btns{ height: 120rpx; background: #eeeeee;display: flex;}
+.tab .btns view{flex: 1; text-align: center; line-height:120rpx;}
+.tab .btns .cur{background: #ffffff;}
+.tab .cons view{height: 480rpx;display: none; text-align: center; line-height:480rpx; font-size:60rpx;}
+.tab .cons .cur{display: block;}

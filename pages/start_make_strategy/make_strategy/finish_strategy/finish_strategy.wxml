@@ -1,0 +1,5 @@
+<!--pages/start_make_strategy/make_strategy/finish_strategy/finish_strategy.wxml-->
+<text>策略定制完成</text>
+<view>{{answerSelected}}{{id_list}}</view>
+<button class='button' type="default" bindtap="start_strategy">确定定制</button>
+

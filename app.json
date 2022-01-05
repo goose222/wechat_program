@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/start_make_strategy/start_make_strategy",
+    "pages/hold_shares/hold_shares",
+    "pages/buy_sell/buy_sell",
+    "pages/start_make_strategy/make_strategy/make_strategy",
+    "pages/start_make_strategy/make_strategy/finish_strategy/finish_strategy",
+    "pages/administer/start/start",
+    "pages/administer/authority/authority",
+    "pages/administer/strategy_tree/strategy_tree",
+    "pages/strategy_working/subscribe/subcribe",
+    "pages/strategy_working/strategy_working",
+    "pages/logs/logs",
+    "pages/k_line/k_line",
+    "pages/strategy_working/all_info/all_info"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "策略小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,11 @@
+/* pages/start_make_strategy.wxss */
+.button{ 
+  border-radius: 80rpx;
+  margin: 30rpx 30rpx;
+  font-size: 35rpx;
+}
+.title {
+  margin: 10px;
+  font-size: 10pt;
+  color: #2b503d;
+}

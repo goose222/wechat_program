@@ -1,0 +1,3 @@
+<!--pages/administer/start/start.wxml-->
+<button class='bottom' type='primary' lang="zh_CN" bindtap="authority">authority</button>
+<button class='bottom' type='primary' lang="zh_CN" bindtap="strategy_tree">strategy_tree</button>

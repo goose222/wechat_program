@@ -1,0 +1,25 @@
+<!--pages/hold_shares/hold_shares.wxml-->
+<text>当前持仓</text>
+<button class='bottom' type='primary'  lang="zh_CN" bindtap="close_position">平仓</button>
+
+<view class="tr">
+  <view class="th">symbol</view>
+  <view class="th">direction</view>
+  <view class="th">price</view>
+  <view class="th">volume</view>
+</view>
+
+<view  class="table" wx:for="{{info}}" wx:key="vtsymbol"  bindtap="answerSelected" wx:for-index="index" class="item {{item.selected?'active':''}}" data-index="{{index}}">
+  <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+    <view class="td">{{item.symbol}}</view>
+    <view class="td">{{item.direction}}</view>
+    <view class="td">{{item.price}}</view>
+    <view class="td">{{item.volume}}</view>
+  </view>
+  <view class="tr bg-w" wx:else>
+    <view class="td">{{item.symbol}}</view>
+    <view class="td">{{item.direction}}</view>
+    <view class="td">{{item.price}}</view>
+    <view class="td">{{item.volume}}</view>
+  </view>
+</view>

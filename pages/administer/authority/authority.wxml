@@ -1,0 +1,24 @@
+<!--pages/administer/authority/authority.wxml-->
+<view class="tab">
+<view class="btns">
+  <view wx:for="{{btns}}" class="{{index==active?'cur':''}}" data-index="{{index}}" bindtap="toggle" wx:key="content">{{item.content}}</view>
+</view>
+<text>用户名：</text>
+<form>
+  <input class="input" auto-focus placeholder="请输入搜索用户id" maxlength="40" bindinput="bindKeyInput_name" />
+  <button class='button' type="default" size="mini" bindtap="search">搜 索</button>
+  <button class='button' form-type="reset" type="default"size="mini" bindtap="showall">显示全部</button>
+</form>
+<checkbox-group bindchange="checkboxChange">
+  <label class="weui-cell weui-check__label" wx:for="{{user_info}}" wx:key="user_id">
+    <view class="weui-cell__hd">
+      <checkbox value="{{item.user_id}}" checked="{{item.checked}}"/>
+      <text>{{item.user_id}}</text>
+    </view>
+  </label>
+</checkbox-group>
+<view wx:if="{{active}}"><button class='button' type="default" size="mini" bindtap="modify2">取消管理员权限</button></view>
+<view wx:else><button class='button' type="default" size="mini" bindtap="modify1">设为管理员</button></view>
+</view>
+
+
